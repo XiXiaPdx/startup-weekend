@@ -6,7 +6,7 @@ public class MemberTest {
 
     @Before
     public void createNewTeamAutoAndClear(){
-    //  Team.clearTeamInstances();
+    Member.clearMemberInstances();
      newMember = new Member ("Sera");
     }
 
@@ -17,6 +17,10 @@ public class MemberTest {
     @Test
     public void getMemberName_Sera (){
       assertEquals("Sera", newMember.getMemberName());
+    }
+    @Test
+    public void getMemberInstanceListSize_1 (){
+      assertEquals(1, Member.getMemberInstances().size());
     }
 
 
