@@ -26,4 +26,10 @@ public class TeamTest {
     assertEquals(1, newTeam.getTeamInstances().size());
   }
 
+  @Test
+  public void getTeamID_2(){
+    Team newTeam2 = new Team ("Borelo");
+    assertEquals(2, newTeam2.getTeamID());
+  }
+
 }
