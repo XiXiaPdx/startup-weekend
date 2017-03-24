@@ -65,22 +65,22 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    // post("/search", (request, response) -> {
-    //   Map<String, Object> model = new HashMap<String, Object>();
-    //   String searchTeam = request.queryParams("searchTeam");
-    //   if (Team.getTeamInstances().size()==0){
-    //     model.put ("teams", Team.getTeamInstances());
-    //   } else {
-    //     List<Team> foundTeam = new ArrayList<Team>();
-    //     for (Team team : Team.getTeamInstances()){
-    //       if (searchTeam.equals(team.getTeamName())){
-    //         foundTeam = foundTeam.add(team);
-    //       }
-    //     }
-    //     model.put("teams", foundTeam);
-    //   }
-    //   model.put("template", "templates/teams.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
+    post("/search", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String searchTeam = request.queryParams("searchTeam");
+      if (Team.getTeamInstances().size()==0){
+        model.put ("teams", Team.getTeamInstances());
+      } else {
+        for (Team team : Team.getTeamInstances()){
+          if ((searchTeam.toLowerCase()).equals(team.getTeamName().toLowerCase())){
+            List<Team> foundTeam = new ArrayList<Team>();
+            foundTeam.add(team);
+            model.put("teams", foundTeam);
+          }
+        }
+      }
+      model.put("template", "templates/teams.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
