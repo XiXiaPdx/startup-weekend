@@ -1,17 +1,14 @@
 #trademark {
   font-size: 20px;
 }
-
 #titleJumbo{
   color: white;
   background-color: grey;
 }
-
 #teamForm{
   width: 50%;
   margin:auto;
 }
-
 #addTeamButton{
   float:left;
   margin-left: 20%;

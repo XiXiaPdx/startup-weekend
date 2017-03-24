@@ -1,19 +1,14 @@
 <div class="container">
-#if ($members.size()==0)
- <h1> There are no members</1>
-#else
-<h2> Team $team.getTeamName()</h2>
-  #foreach ($member in $members)
-   <div class="jumbotron teamJumbo">
-    <h3 class="memberName"><a href ="/teams/$team.getTeamID()/member/$team.getTeamMembers().indexOf($member)">$member.getMemberName()</a> </h3>
-   </div>
+  #if ($members.size()==0)
+   <h1> There are no members</1>
+  #else
+    <h2> Team $team.getTeamName()</h2>
+    #foreach ($member in $members)
+     <div class="jumbotron teamJumbo">
+        <h3 class="memberName"><a href ="/teams/$team.getTeamID()/member/$team.getTeamMembers().indexOf($member)">$member.getMemberName()</a> </h3>
+     </div>
+    #end
   #end
-#end
-
-
-    <a href="/" class="btn btn-warning" id="seeAllTeamsButton" ><h4>Add More Teams</h4></a>
-
-    <a href="/teams" class="btn btn-warning" id="goBackToTeams"><h4>Add Another Member</h4></a>
-
-
+  <a href="/" class="btn btn-warning" id="seeAllTeamsButton" ><h4>Add More Teams</h4></a>
+  <a href="/teams" class="btn btn-warning" id="goBackToTeams"><h4>Add Another Member</h4></a>
 </div>

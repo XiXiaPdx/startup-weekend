@@ -26,5 +26,4 @@ public class Member {
   public static Member findMember(int id){
     return instances.get(id -1);
   }
-
 }

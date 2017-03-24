@@ -3,6 +3,9 @@ import java.util.HashMap;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class App {
   public static void main(String[] args) {
@@ -35,7 +38,6 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Team team = Team.findTeam(Integer.parseInt(request.params(":id")));
       String newMemberName = request.queryParams("newMember");
-      System.out.println(newMemberName);
       Member newMember = new Member (newMemberName);
       team.addTeamMember(newMember);
       model.put ("members", team.getTeamMembers());
@@ -53,7 +55,6 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-
     get("/teams/:id1/member/:id2", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Team team = Team.findTeam(Integer.parseInt(request.params(":id1")));
@@ -64,8 +65,22 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-
-
-
+    // post("/search", (request, response) -> {
+    //   Map<String, Object> model = new HashMap<String, Object>();
+    //   String searchTeam = request.queryParams("searchTeam");
+    //   if (Team.getTeamInstances().size()==0){
+    //     model.put ("teams", Team.getTeamInstances());
+    //   } else {
+    //     List<Team> foundTeam = new ArrayList<Team>();
+    //     for (Team team : Team.getTeamInstances()){
+    //       if (searchTeam.equals(team.getTeamName())){
+    //         foundTeam = foundTeam.add(team);
+    //       }
+    //     }
+    //     model.put("teams", foundTeam);
+    //   }
+    //   model.put("template", "templates/teams.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
   }
 }

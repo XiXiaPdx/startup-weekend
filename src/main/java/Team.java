@@ -22,7 +22,6 @@ public class Team {
   public void addTeamMember (Member member) {
     mTeamMembers.add(member);
   }
-
   public int getTeamID() {
     return mTeamID;
   }

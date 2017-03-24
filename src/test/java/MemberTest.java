@@ -3,13 +3,12 @@ import static org.junit.Assert.*;
 
 public class MemberTest {
     private Member newMember;
-
+    
     @Before
     public void createNewTeamAutoAndClear(){
     Member.clearMemberInstances();
      newMember = new Member ("Sera");
     }
-
     @Test
     public void createMemberInstance_true (){
       assertTrue(newMember instanceof Member);
@@ -26,7 +25,4 @@ public class MemberTest {
     public void getMemberID_1 (){
       assertEquals(1, newMember.getMemberID());
     }
-
-
-
 }
