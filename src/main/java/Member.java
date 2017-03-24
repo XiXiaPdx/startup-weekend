@@ -6,5 +6,8 @@ public class Member {
   public Member (String name){
     mMemberName = name;
   }
+  public String getMemberName(){
+    return mMemberName;
+  }
 
 }

@@ -14,6 +14,10 @@ public class MemberTest {
     public void createMemberInstance_true (){
       assertTrue(newMember instanceof Member);
     }
+    @Test
+    public void getMemberName_Sera (){
+      assertEquals("Sera", newMember.getMemberName());
+    }
 
 
 
