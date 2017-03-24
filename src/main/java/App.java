@@ -42,6 +42,16 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+    get("/teams/:id1/member/:id2", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Team team = Team.findTeam(Integer.parseInt(request.params(":id1")));
+      Member member = team.getTeamMembers().get(Integer.parseInt(request.params(":id2")));
+      model.put ("member", member);
+      model.put("team", team);
+      model.put("template", "templates/member.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
 
 
 
