@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Team {
   private String mTeamName;
-  private static List<Team> instances = new ArrayList<Team>();
+  private static List<Team> instances = new ArrayList<Team> ();
 
   public Team (String name) {
     mTeamName = name;
@@ -12,7 +12,10 @@ public class Team {
   public String getTeamName () {
     return mTeamName;
   }
-  public List<Team> getTeamInstances () {
+  public static List<Team> getTeamInstances () {
     return instances;
+  }
+  public static void clearTeamInstances () {
+    instances.clear();
   }
 }

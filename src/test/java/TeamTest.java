@@ -6,7 +6,8 @@ public class TeamTest {
   private Team newTeam;
 
   @Before
-  public void createNewTeamAuto(){
+  public void createNewTeamAutoAndClear(){
+   newTeam.clearTeamInstances();
    newTeam = new Team ("Kodiak");
   }
 
@@ -21,7 +22,7 @@ public class TeamTest {
   }
 
   @Test
-  public void createTeamStaticList_1(){
+  public void createTeamClassList_1(){
     assertEquals(1, newTeam.getTeamInstances().size());
   }
 
