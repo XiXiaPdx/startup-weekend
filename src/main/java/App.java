@@ -31,16 +31,28 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/teams/:id", (request, response) -> {
+    post("/teams/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Team team = Team.findTeam(Integer.parseInt(request.params(":id")));
-      Member newMember = new Member ("testMember");
+      String newMemberName = request.queryParams("newMember");
+      System.out.println(newMemberName);
+      Member newMember = new Member (newMemberName);
       team.addTeamMember(newMember);
       model.put ("members", team.getTeamMembers());
       model.put("team", team);
       model.put("template", "templates/team.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/teams/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Team team = Team.findTeam(Integer.parseInt(request.params(":id")));
+      model.put("team", team);
+      model.put ("members", team.getTeamMembers());
+      model.put("template", "templates/team.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
 
     get("/teams/:id1/member/:id2", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();

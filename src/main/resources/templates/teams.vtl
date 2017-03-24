@@ -1,12 +1,24 @@
 <!--teams.vtl-->
 
 <div class="container">
-  #foreach ($team in $teams)
-   <div class="jumbotron teamJumbo">
-    <h2 class="teamName"> Team $team.getTeamName()</h2>
-    
-    <h4><a href="teams/$team.getTeamID()"> Add Team Member</a>
-   </div></h4>
+  #if ($teams.size()==0)
+    <h1> There are no teams </h1>
+  #else
+    #foreach ($team in $teams)
+     <div class="jumbotron teamJumbo">
+      <h2 class="teamName"> Team $team.getTeamName()</h2>
+      <div class="form-group">
+      <form action="teams/$team.getTeamID()" method="post">
+        <div class="form-group" id="memberName">
+          <label for="newMember">First Name</label>
+          <input id="newMember" name="newMember" type="text">
+        </div>
+        <button type="submit" class="btn btn-success" id="addMemberButton">Add New Member</button>
+      </form>
+      <h4><a href="/teams/$team.getTeamID()">See All Team Members</a></h4>
+      </div>
+    </div>
+    #end
   #end
    <h4><a href="/">Add More Teams</a></h4>
 </div>
