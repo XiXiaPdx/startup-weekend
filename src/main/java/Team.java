@@ -5,16 +5,20 @@ public class Team {
   private String mTeamName;
   private static List<Team> instances = new ArrayList<Team> ();
   private int mTeamID;
+  private List<Member> mTeamMembers;
 
   public Team (String name) {
     mTeamName = name;
     instances.add(this);
     mTeamID = instances.size();
+    mTeamMembers = new ArrayList<Member> ();
   }
   public String getTeamName () {
     return mTeamName;
   }
-
+  public List<Member> getTeamMembers () {
+    return mTeamMembers;
+  }
 
   public int getTeamID() {
     return mTeamID;

@@ -37,5 +37,9 @@ public class TeamTest {
     Team newTeam2 = new Team ("Borelo");
     assertEquals("Borelo", (Team.findTeam(newTeam2.getTeamID())).getTeamName());
   }
+  @Test
+  public void getTeamMembersList_0(){
+    assertEquals(0, newTeam.getTeamMembers().size());
+  }
 
 }
