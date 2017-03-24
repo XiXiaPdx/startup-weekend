@@ -1,0 +1,14 @@
+<!--teams.vtl-->
+
+<div class="container">
+  #foreach ($team in $teams)
+   <div class="jumbotron teamJumbo">
+    <h2 class="teamName"> Team $team.getTeamName()</h2>
+    
+    <h4><a href="teams/$team.getTeamID()"> Add Team Member</a>
+   </div></h4>
+  #end
+   <h4><a href="/">Add More Teams</a></h4>
+</div>
+
+<!--teams.vtl-->

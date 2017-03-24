@@ -19,6 +19,9 @@ public class Team {
   public List<Member> getTeamMembers () {
     return mTeamMembers;
   }
+  public void addTeamMember (Member member) {
+    mTeamMembers.add(member);
+  }
 
   public int getTeamID() {
     return mTeamID;
