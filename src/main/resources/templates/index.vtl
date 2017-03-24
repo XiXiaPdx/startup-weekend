@@ -1,17 +1,27 @@
 <!--index.vtl-->
-<div class="jumbotron" id="explainEventJumbo">
-<h3>explain event in detail here</h3>
+<div class="jumbotron well" id="explainEventJumbo">
+<h3>People love technology but hate the loss of person connection. </h3>
+
+<h3>This has lead to a resurgence for table top board games, role-playing games like Dungeons & Dragons, and countless card games from Magic: The Gathering to Exploding Kittens.</h3>
+
+<h3>However, technology can augment and enhance the interpersonal experience of board games. With the right perspective and approach, there is an incredible opportunity for technology to be a part of the resurgence of board games.</h3>
+
+<h3>The purpose of Hack & / is to dive into that intersection and see what we can come up with!</h3>
+
 </div>
-<div class="container">
+<div class="container" id="teamForm">
   <div class="form-group">
   <form action="/teams" method="post">
     <div class="form-group" id="teamName">
-      <label for="newTeam">Enter A Team Name</label>
-      <input id="newTeam" name="newTeam" type="text">
+      <label for="newTeam"><h3>Enter A Team Name</h3></label>
+      <input id="newTeam" name="newTeam" class="form-control input-lg" type="text" required>
     </div>
-    <button type="submit" class="btn btn-success" id="addTeamButton">Add New Team</button>
+    <button type="submit" class="btn btn-danger" id="addTeamButton"><h4>Add New Team</h4></button>
+
+
   </form>
+
+  <a href="/teams" class="btn btn-warning" id="seeAllTeamsButton" role="button"><h4>See All Teams</h4></a>
   </div>
-  <h4><a href="/teams">See All Teams</a></h4>
 </div>
 <!--index.vtl-->

@@ -8,19 +8,23 @@
      <div class="jumbotron teamJumbo">
       <h2 class="teamName"> Team $team.getTeamName()</h2>
       <div class="form-group">
-      <form action="teams/$team.getTeamID()" method="post">
+      <form action="teams/$team.getTeamID()" method="post" id="addMemberForm">
         <div class="form-group" id="memberName">
-          <label for="newMember">First Name</label>
-          <input id="newMember" name="newMember" type="text">
+          <label for="newMember"><h3>Member's First Name</h3></label>
+          <input id="newMember" name="newMember" class="form-control" type="text" required>
         </div>
-        <button type="submit" class="btn btn-success" id="addMemberButton">Add New Member</button>
+        <button type="submit" class="btn btn-danger" id="addMemberButton"><h4>Add New Member</h4></button>
+
       </form>
-      <h4><a href="/teams/$team.getTeamID()">See All Team Members</a></h4>
+<a href="/teams/$team.getTeamID()" class="btn btn-success" id="seeAllTeamMembersButton"><h4>See All Team Members</h4></a>
       </div>
     </div>
     #end
   #end
-   <h4><a href="/">Add More Teams</a></h4>
+
+   <a href="/" class="btn btn-warning" id="seeAllTeamsButton" ><h4>Add More Teams</h4></a>
+
+
 </div>
 
 <!--teams.vtl-->
