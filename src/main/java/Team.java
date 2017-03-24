@@ -14,14 +14,18 @@ public class Team {
   public String getTeamName () {
     return mTeamName;
   }
+
+
+  public int getTeamID() {
+    return mTeamID;
+  }
   public static List<Team> getTeamInstances () {
     return instances;
   }
   public static void clearTeamInstances () {
     instances.clear();
   }
-
-  public int getTeamID() {
-    return mTeamID;
+  public static Team findTeam(int teamID) {
+    return instances.get(teamID -1);
   }
 }

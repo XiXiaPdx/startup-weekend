@@ -7,7 +7,7 @@ public class TeamTest {
 
   @Before
   public void createNewTeamAutoAndClear(){
-   newTeam.clearTeamInstances();
+   Team.clearTeamInstances();
    newTeam = new Team ("Kodiak");
   }
 
@@ -23,13 +23,19 @@ public class TeamTest {
 
   @Test
   public void createTeamClassList_1(){
-    assertEquals(1, newTeam.getTeamInstances().size());
+    assertEquals(1, Team.getTeamInstances().size());
   }
 
   @Test
   public void getTeamID_2(){
     Team newTeam2 = new Team ("Borelo");
     assertEquals(2, newTeam2.getTeamID());
+  }
+
+  @Test
+  public void findTeam_Borelo(){
+    Team newTeam2 = new Team ("Borelo");
+    assertEquals("Borelo", (Team.findTeam(newTeam2.getTeamID())).getTeamName());
   }
 
 }
