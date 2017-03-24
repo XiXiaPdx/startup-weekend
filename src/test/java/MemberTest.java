@@ -22,6 +22,10 @@ public class MemberTest {
     public void getMemberInstanceListSize_1 (){
       assertEquals(1, Member.getMemberInstances().size());
     }
+    @Test
+    public void getMemberID_1 (){
+      assertEquals(1, newMember.getMemberID());
+    }
 
 
 
