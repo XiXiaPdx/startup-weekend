@@ -1,3 +1,9 @@
+body {
+  background-color: #312f2f;
+}
+#teamName {
+  color: white;
+}
 #trademark {
   font-size: 20px;
 }
@@ -17,6 +23,12 @@
 
   margin-left:20px;
 }
+#search{
+  color:white;
+}
+#searchTeamButton{
+  margin-left: 37%;
+}
 #addMemberForm{
   width:40%;
 }
@@ -26,4 +38,22 @@
 
 #addMemberButton{
   float: left;
+}
+
+#titleJumbo {
+  background-image: url("http://mythcreants.com/wp-content/uploads/2015/06/5E-Cover.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0px -200px;
+
+  /*background-position: center;*/
+  color: white;
+  height: 400px;
+  text-align: left;
+  text-shadow: 4px 6px 16px black;
+}
+
+#titleText {
+  float:right;
+  width:35%;
 }
