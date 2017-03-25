@@ -1,7 +1,10 @@
 <!--teams.vtl-->
-<div class="container">
+<div class="container paddingleftzero">
+  #if ($search == "NoTeam")
+    <h1 class="whitetext"> Could not find Team $searchedFor on our team list.  </h1>
+  #end
   #if ($teams.size()==0)
-    <h1> There are no teams </h1>
+    <h1 class="whitetext"> There are no teams </h1>
   #else
     #foreach ($team in $teams)
      <div class="jumbotron teamJumbo">

@@ -68,15 +68,21 @@ public class App {
     post("/search", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String searchTeam = request.queryParams("searchTeam");
+      boolean ifTeamFound = false;
       if (Team.getTeamInstances().size()==0){
         model.put ("teams", Team.getTeamInstances());
       } else {
         for (Team team : Team.getTeamInstances()){
+          List<Team> foundTeam = new ArrayList<Team>();
           if ((searchTeam.toLowerCase()).equals(team.getTeamName().toLowerCase())){
-            List<Team> foundTeam = new ArrayList<Team>();
             foundTeam.add(team);
             model.put("teams", foundTeam);
+            ifTeamFound =true;
           }
+        }
+        if (!ifTeamFound) {
+          model.put("search", "NoTeam");
+          model.put("searchedFor", searchTeam);
         }
       }
       model.put("template", "templates/teams.vtl");

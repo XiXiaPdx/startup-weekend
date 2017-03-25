@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container paddingleftzero">
   #if ($members.size()==0)
-   <h1> There are no members</1>
+   <h1 class="whitetext"> There are no members</h1>
   #else
-    <h2> Team $team.getTeamName()</h2>
+    <h2 class="whitetext" > Team $team.getTeamName()</h2>
     #foreach ($member in $members)
      <div class="jumbotron teamJumbo">
         <h3 class="memberName"><a href ="/teams/$team.getTeamID()/member/$team.getTeamMembers().indexOf($member)">$member.getMemberName()</a> </h3>

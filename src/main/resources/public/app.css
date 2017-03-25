@@ -1,6 +1,20 @@
 body {
   background-color: #312f2f;
 }
+
+.whitetext {
+  color: white;
+}
+.teamJumbo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.paddingleftzero{
+  padding-left: 0px;
+  padding-right:30px;
+}
+
 #teamName {
   color: white;
 }
@@ -12,12 +26,9 @@ body {
   background-color: grey;
 }
 #teamForm{
-  width: 50%;
-  margin:auto;
 }
 #addTeamButton{
   float:left;
-  margin-left: 20%;
 }
 #seeAllTeamsButton{
 
@@ -27,7 +38,7 @@ body {
   color:white;
 }
 #searchTeamButton{
-  margin-left: 37%;
+
 }
 #addMemberForm{
   width:40%;
@@ -54,6 +65,5 @@ body {
 }
 
 #titleText {
-  float:right;
-  width:35%;
+
 }

@@ -1,32 +1,36 @@
 <!--index.vtl-->
-<div class="jumbotron well" id="explainEventJumbo">
-  <h3>People love technology but hate the loss of person connection. </h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="jumbotron well" id="explainEventJumbo">
+      <h3>People love technology but regret the loss of personal connection. </h3>
 
-  <h3>This has lead to a resurgence for table top board games, role-playing games like Dungeons & Dragons, and countless card games from Magic: The Gathering to Exploding Kittens.</h3>
+      <h3>This has lead to a resurgence for table top board games, role-playing games like D&D, and countless card games from Magic: The Gathering to Exploding Kittens.</h3>
 
-  <h3>However, technology can augment and enhance the interpersonal experience of board games. With the right perspective and approach, there is an incredible opportunity for technology to be a part of the resurgence of board games.</h3>
+      <h3>Yet, technology can augment the interpersonal experience of board games. With the right touch, there is an incredible opportunity for technology to be a part of the resurgence of board games.</h3>
 
-  <h3>The purpose of Hack & / is to dive into that intersection and see what we can come up with!</h3>
-</div>
-<div class="container" id="teamForm">
-  <div class="form-group">
-    <form action="/teams" method="post">
-      <div class="form-group" id="teamName">
-        <label for="newTeam"><h3>Join Us! Enter Your Team Name</h3></label>
-        <input id="newTeam" name="newTeam" class="form-control input-lg" type="text" required>
-      </div>
-      <button type="submit" class="btn btn-danger" id="addTeamButton"><h4>Add New Team</h4></button>
-    </form>
-    <a href="/teams" class="btn btn-warning" id="seeAllTeamsButton" role="button"><h4>See All Teams</h4></a>
+      <h3>The purpose of Hack & / is to find that perfect blend of technology with a table top game.</h3>
+    </div>
   </div>
-  <div class="form-group">
-    <form action="/search" method="post">
-      <div class="form-group" id="search">
-        <label for="searchTeam"><h3>Search For A Team</h3></label>
-        <input id="searchTeam" name="searchTeam" class="form-control input-lg" type="text" required>
-      </div>
-      <button type="submit" class="btn btn-primary" id="searchTeamButton"><h4>Search Teams</h4></button>
-    </form>
+  <div class="col-md-6">
+    <div class="form-group" id="teamForm">
+      <form action="/teams" method="post">
+        <div class="form-group" id="teamName">
+          <label for="newTeam"><h3>Join Us! Enter Your Team Name</h3></label>
+          <input id="newTeam" name="newTeam" class="form-control input-lg" type="text" required>
+        </div>
+        <button type="submit" class="btn btn-danger" id="addTeamButton"><h4>Add New Team</h4></button>
+      </form>
+      <a href="/teams" class="btn btn-warning" id="seeAllTeamsButton" role="button"><h4>See All Teams</h4></a>
+    </div>
+    <div class="form-group">
+      <form action="/search" method="post">
+        <div class="form-group" id="search">
+          <label for="searchTeam"><h3>Search For A Team</h3></label>
+          <input id="searchTeam" name="searchTeam" class="form-control input-lg" type="text" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="searchTeamButton"><h4>Search Teams</h4></button>
+      </form>
+    </div>
   </div>
 </div>
 <!--index.vtl-->
