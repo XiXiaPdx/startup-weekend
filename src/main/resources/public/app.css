@@ -1,6 +1,12 @@
 body {
   background-color: #312f2f;
 }
+.affix {
+     top: 0px;
+margin-left: 50%;
+transition-duration:2s;
+   transition-timing-function: ease;
+ }
 
 .whitetext {
   color: white;
